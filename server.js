@@ -10,9 +10,11 @@ app.use(express.static('static'));
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-app.get('/home.ejs', (req, res) => {
-    res.render('home.ejs', { userInput });
+app.get('/home', (req, res) => {
     const userInput = req.query.name || "";
+    res.render('home.ejs', { userInput });
+
+    
 
 });
 
