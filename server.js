@@ -13,11 +13,11 @@ app.set('views', 'views');
 app.get('/home', (req, res) => {
     const userInput = req.query.name || "";
     res.render('home.ejs', { userInput });
-
-    
-
 });
 
+app.get('/products', (req, res) => {
+    res.render('products.ejs');
+});
 
 
 app.use((req, res) => {
