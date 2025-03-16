@@ -1,15 +1,11 @@
 :root
 {
     --main-title-color: black;
-    --main-bg-color: #f4f4f4;
+    --main-bg-color: #f4f4f4; /*Na design bepalen*/
     --main-text-color: black;
-    --main-link-color: #007bff;
-    --main-link-hover-color: #0056b3;
-    --main-border-color: #ccc;
-    --main-border-radius: 5px;
-    --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    --main-transition: 0.3s;
-}
+    --main-border-color: black; /*Na design bepalen*/
+    --main-border-radius: 20px;
+    --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);}
 
 h1 {
     color: var(--main-title-color);
@@ -20,6 +16,8 @@ h1 {
     margin: 0;
     margin-right: 20%;
     list-style-type: none;
+    flex-wrap: nowrap;
+    
 }
 
 h1 a {
@@ -32,6 +30,7 @@ body div:first-of-type {
     flex-direction: row;
     padding-left: 0;
     border: 2px solid var(--main-border-color);
+    border-radius: var(--main-border-radius);
 }
 
 body div:first-of-type label {
@@ -74,7 +73,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 50%;
+    width: 100%;
     border: 2px solid var(--main-border-color);
     padding-left: 0;
 }
