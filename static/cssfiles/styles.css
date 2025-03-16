@@ -5,6 +5,7 @@
     --main-text-color: black;
     --main-border-color: black; /*Na design bepalen*/
     --main-border-radius: 20px;
+    --main-border-radius-button: 8px;
     --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);}
 
 h1 {
@@ -25,18 +26,51 @@ h1 a {
     text-decoration: none;
 }
 
-body div:first-of-type {
+.header {
     display: flex;
     flex-direction: row;
     padding-left: 0;
     border: 2px solid var(--main-border-color);
     border-radius: var(--main-border-radius);
 }
-
-body div:first-of-type label {
-    display: none;
+.search {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    width: 100%;
+    border-radius: var(--main-border-radius);
 }
 
+
+.search label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 5px;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    pointer-events: none;
+    font-size: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: calc(100% - 20px);
+}
+
+
+
+.search input {
+    width: 100%;
+    height: 2em;
+    margin: auto 0;
+    margin-left: 1%;
+    margin-right: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--main-border-radius);
+    padding-left: 30px; /* Ensure padding to avoid overlap with label */
+}
 body div:first-of-type input {
     width: 100%;
     height: 2em;
@@ -56,6 +90,7 @@ body div:first-of-type button {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: var(--main-border-radius-button);
 }
 
 nav ul li {
