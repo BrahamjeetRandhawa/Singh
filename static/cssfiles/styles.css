@@ -1,0 +1,42 @@
+:root
+{
+    --main-title-color: black;
+    --main-bg-color: #f4f4f4;
+    --main-text-color: black;
+    --main-link-color: #007bff;
+    --main-link-hover-color: #0056b3;
+    --main-border-color: #ccc;
+    --main-border-radius: 5px;
+    --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --main-transition: 0.3s;
+}
+
+h1 {
+    color: var(--main-title-color);
+    border: 2px solid var(--main-border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin: 0 auto;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    transition: var(--main-transition);
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    border: 2px solid var(--main-border-color);
+    padding-left: 0;
+}
