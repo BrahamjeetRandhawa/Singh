@@ -1,13 +1,16 @@
-:root
-{
+:root {
     --main-title-color: black;
-    --main-bg-color: #f4f4f4; /*Na design bepalen*/
+    --main-bg-color: #f5f5f5; /*Na design bepalen*/
     --main-text-color: black;
-    --main-border-color: black; /*Na design bepalen*/
+    --main-border-color: #f59e0b; /*Na design bepalen*/
     --main-border-radius: 20px;
     --main-border-radius-button: 8px;
-    --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);}
+    --main-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+body {
+    background-color: var(--main-bg-color);
+}
 h1 {
     color: var(--main-title-color);
     border: 2px solid var(--main-border-color);
@@ -18,12 +21,16 @@ h1 {
     margin-right: 20%;
     list-style-type: none;
     flex-wrap: nowrap;
-    
 }
 
 h1 a {
     color: var(--main-title-color);
     text-decoration: none;
+}
+
+h1 img {
+    width: 2.5em;
+
 }
 
 .header {
@@ -33,6 +40,7 @@ h1 a {
     border: 2px solid var(--main-border-color);
     border-radius: var(--main-border-radius);
 }
+
 .search {
     position: relative;
     display: flex;
@@ -42,22 +50,45 @@ h1 a {
     border-radius: var(--main-border-radius);
 }
 
-
 .search label {
     position: absolute;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
     padding: 0 5px;
+    padding-left: 3%;
     transition: transform 0.3s ease, font-size 0.3s ease;
     pointer-events: none;
-    font-size: 1em;
+    font-size: 1.2em;
     white-space: nowrap;
     overflow: hidden;
     max-width: calc(100% - 20px);
+    animation: typing 4s steps(15) forwards; /* Add typing animation */
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
 }
 
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    25% {
+        width: 25%; /* Adjust to the desired width */
+    }
+    50% {
+        width: 50%;
+    }
+    75% {
+        width: 75%;
+    }
+    100% {
+        width: 100%;
+    }
+}
 
+.search input:focus + label,
+.search input:not(:placeholder-shown) + label {
+    opacity: 0; /* Fade out the label when input is focused or has text */
+}
 
 .search input {
     width: 100%;
@@ -65,15 +96,54 @@ h1 a {
     margin: auto 0;
     margin-left: 1%;
     margin-right: 1%;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: #f59e0b 1px 2px 4px;
     border-radius: var(--main-border-radius);
-    padding-left: 30px; /* Ensure padding to avoid overlap with label */
+    padding-left: 3%; /* Ensure padding to avoid overlap with label */
+    animation: inputHeight 0.6s; /* Smooth animation */
 }
+
+.search input::after {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 1em;
+    height: 1em;
+}
+
+
+
+@keyframes inputHeight {
+    0% {
+        width: 0%;
+    }
+    25% {
+        width: 25%;
+    }
+    50% {
+        width: 50%;
+    }
+    75% {
+        width: 75%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
 body div:first-of-type input {
     width: 100%;
-    height: 2em;
+    height: 3em;
     margin: auto 0;
     margin-left: 1%;
     margin-right: 1%;
@@ -83,10 +153,11 @@ body div:first-of-type input {
 }
 
 body div:first-of-type button {
-    height: 2em;
+    height: 3em;
     margin: auto 0;
     margin-left: 1%;
     margin-right: 1%;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,6 +166,7 @@ body div:first-of-type button {
 
 nav ul li {
     list-style-type: none;
+    margin-right: 10%;
 }
 
 nav ul li a {
@@ -107,7 +179,7 @@ nav ul li a {
 nav ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start; /* Change to align items to the left */
     width: 100%;
     border: 2px solid var(--main-border-color);
     padding-left: 0;

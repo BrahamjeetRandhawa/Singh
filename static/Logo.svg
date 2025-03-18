@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77.11 68.3">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 40.5px;
+        letter-spacing: -.02em;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #203c86;
+        stroke: #f59e11;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-5, .cls-6 {
+        fill: #1d1d1b;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        font-size: 40.95px;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-7 {
+        font-family: BebasNeueSemiRounded-Regular, 'Bebas Neue SemiRounded';
+        font-size: 21px;
+      }
+    </style>
+  </defs>
+  <text class="cls-7" transform="translate(.25 63.85)"><tspan class="cls-3" x="0" y="0">T</tspan><tspan class="cls-5" x="7.64" y="0">era</tspan><tspan class="cls-4" x="32.15" y="0">B</tspan><tspan class="cls-6" x="40.3" y="0">y</tspan><tspan class="cls-5" x="48.66" y="0">te</tspan></text>
+  <text class="cls-1" transform="translate(7.55 47.41) scale(1.09 1)"><tspan x="0" y="0">T</tspan></text>
+  <text class="cls-2" transform="translate(29.77 35.39) scale(1.08 1)"><tspan x="0" y="0">B</tspan></text>
+</svg>
