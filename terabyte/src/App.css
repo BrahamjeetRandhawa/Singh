@@ -3,3 +3,20 @@
   box-sizing: border-box;
   transition: all 0.5s ease-in-out;
 }
+
+.App {
+  height: 100vh;
+}
+
+.Topnav {
+  top: 0;
+}
+
+.App-main {
+  border: 2px solid green;
+}
+
+.App-main > .Mainpageterabyte {
+  padding-top: 1em;
+  overflow-y: auto;
+}

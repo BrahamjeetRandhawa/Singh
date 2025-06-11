@@ -7,10 +7,12 @@ h1 {
 
 .topbar {
     border: 2px solid green;
+    position: fixed;
 }
 
 .terabytebar {
-    border: 4px solid gold;
+    background: none;
+    
 }
 
 .terabytebarlist {
@@ -27,10 +29,20 @@ h1 {
     align-items: center;
     border: 2px solid black;
     border-radius: 30px;
-    padding: .5em 1em;
+    padding: .3em 2.5em;
     margin: 0;
     list-style: none;
-    box-shadow: 2px 8px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 5px 10px rgba(0, 1, 0, 0.3);
+    
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition: backdrop-filter 0.3s ease, background 0.3s ease;
+}
+
+.terabyteitems:last-of-type {
+    border: none;
 }
 
 .header {
@@ -46,7 +58,7 @@ h1 {
 
 .search input {
     border-radius: 60px;   
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 1px 2px rgba(0, 0, 0, 0.3);
     padding: .4em;
     margin: 8px;
 }
