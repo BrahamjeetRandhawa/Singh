@@ -7,13 +7,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Top className= "Topnav" />
+        <Top className= "Topbar" />
       </header>
       <main className="App-main">
+        <div className="Main-content">
       
       <Mainpage className= "Mainpageterabyte" />
+        </div>
       </main>
-      
+        
     </div>
   );
 }

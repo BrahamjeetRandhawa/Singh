@@ -1,2 +1,13 @@
 
+.Mainpage > h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 900;
+}
 
+.Mainpage-content {
+    margin-left: 50%;
+    border: 2px solid black;
+    width: 50em;
+    height: 40em;
+}
