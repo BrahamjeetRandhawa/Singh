@@ -1,5 +1,8 @@
 
-
+html {
+    scroll-behavior: smooth;
+    background: darkblue;
+}
 h1 {
     color: orange;
     text-align: center;
@@ -13,7 +16,38 @@ h1 {
 
 .terabytebar {
     background: none;
+
+
+
+
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2px) saturate(180%);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.8);
+    border-radius: 2rem;
+    padding: 1.25rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), inset 0 4px 20px rgba(255, 255, 255, 0.3);
+
     
+}
+
+
+.terabytebar::after {
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  backdrop-filter: blur(1px);
+  box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+    inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+  pointer-events: none;
 }
 
 .terabytebarlist {
@@ -28,32 +62,28 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 30px;
     padding: .3em 2.5em;
     margin: 0;
     list-style: none;
-    box-shadow: 3px 5px 10px rgba(0, 1, 0, 0.3);
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 1);
     
-    background: rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(10px);
 
-    transition: backdrop-filter 0.3s ease, background 0.3s ease;
+    transition: backdrop-filter 0.3s ease, background 0.3s ease; */
+    cursor: pointer;
 
-
-
-
-
-
-    position: relative;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(2px) saturate(180%);
-  border: 0.0625rem solid rgba(255, 255, 255, 0.8);
-  border-radius: 2rem;
-  padding: 1.25rem;
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), inset 0 4px 20px rgba(255, 255, 255, 0.3);
+   
 }
+
+.terabyteitems::after {
+    border-radius: 30px;
+}
+
+
 
 .terabyteitems:last-of-type {
     
