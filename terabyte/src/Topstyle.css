@@ -1,7 +1,7 @@
 
 html {
     scroll-behavior: smooth;
-    background: darkblue;
+    background: var(--primary-color);
 }
 h1 {
     color: orange;
@@ -101,6 +101,8 @@ h1 {
 
 .search label {
     position: absolute;
+    display: flex;
+    align-items: center;
     /* left: 10px; */
     top: 50%;
     transform: translateY(-50%);
