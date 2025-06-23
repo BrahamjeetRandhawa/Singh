@@ -16,13 +16,12 @@ function Top() {
                     <li className= "terabyteitems">About us</li>
                     <li className= "terabyteitems">
 
-                         <div class="header">
+                         
         <div className="search">
             <label>search the site</label>
             <input type="search" name="site search" />
         </div>
         <button>search</button>
-    </div>
 
                     </li>
                 </ul>
