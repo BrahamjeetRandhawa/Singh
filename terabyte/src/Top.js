@@ -10,10 +10,6 @@ function Top() {
                     <li className= "terabyteitems">Deals</li>
                     <li className= "terabyteitems">Computers</li>
                     <li className= "terabyteitems">Gaming</li>
-                    <li className= "terabyteitems">Sound & Multimedia</li>
-                    <li className= "terabyteitems">Accessories</li>
-                    <li className= "terabyteitems">Contact</li>
-                    <li className= "terabyteitems">About us</li>
                     <li className= "terabyteitems">
 
                          
@@ -24,6 +20,9 @@ function Top() {
         <button>search</button>
 
                     </li>
+                    <li className= "terabyteitems">Accessories</li>
+                    <li className= "terabyteitems">Contact</li>
+                    <li className= "terabyteitems">About us</li>
                 </ul>
             </nav>
         </div>
