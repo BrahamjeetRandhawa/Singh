@@ -96,10 +96,10 @@ h1 {
     position: absolute;
     display: flex;
     align-items: center;
-    /* left: 10px; */
+    left: 15px;
     /* border: 2px solid red; */
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-55%);
     /* padding: 0 5px;
     padding-left: 5%; */
     transition: transform 0.3s ease, font-size 0.3s ease;
@@ -108,17 +108,17 @@ h1 {
     white-space: nowrap;
     overflow: hidden;
     max-width: calc(100% - 20px);
-    animation: typing 4s steps(15) forwards; /* Add typing animation */
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    /* animation: typing 4s steps(15) forwards;
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); */
 }
 
-
+/* 
 @keyframes typing {
     0% {
         width: 0;
     }
     25% {
-        width: 25%; /* Adjust to the desired width */
+        width: 25%;
     }
     50% {
         width: 50%;
@@ -129,7 +129,7 @@ h1 {
     100% {
         width: 100%;
     }
-}
+} */
 
 
 .search input {
@@ -149,10 +149,10 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: inputHeight 0.6s; /* Smooth animation */
+    /* animation: inputHeight 0.6s; */
 }
 
-
+/* 
 @keyframes inputHeight {
     0% {
         width: 0%;
@@ -169,7 +169,7 @@ h1 {
     100% {
         width: 100%;
     }
-}
+} */
 
 
 
@@ -182,10 +182,11 @@ h1 {
     height: 1em;
 }
 
-/* .search input:focus + label,
-.search input:not(:placeholder-shown) + label {
-    opacity: 0; 
-} */
+
+
+.search:focus-within label {
+    opacity: 0;
+}
 
 
 
