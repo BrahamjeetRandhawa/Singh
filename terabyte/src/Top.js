@@ -1,9 +1,32 @@
 import './Topstyle.css';
+import React, { useState, useEffect } from 'react';
 
 
 function Top() {
+        const [scrollPercent, setScrollPercent] = useState(0);
+    
+        useEffect(() => {
+            const handleScroll = () => {
+                const scrollTop = window.scrollY;
+                const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolled = (scrollTop / docHeight) * 100;
+                setScrollPercent(scrolled);
+            };
+        window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const blur = Math.min(scrollPercent / 10, 1) * 8;
+    const bgOpacity = Math.min(scrollPercent / 10, 1);
+
+    const styleVars = {
+        '--topbar-blur' : `${blur}px`,
+        '--topbar-bg': `linear-gradient(to top, rgba(255,255,255, ${0.1 * bgOpacity}), rgba(0,0,0 ${0.2 * bgOpacity}) 100%)`
+    }
+        
+
     return (
-        <div className= "topbar">
+        <div className= "topbar" style={styleVars}>
             <h1>TeraByte</h1>
             <nav className= "terabytebar">
                 <ul className= "terabytebarlist">
@@ -26,7 +49,8 @@ function Top() {
                 </ul>
             </nav>
         </div>
-    )
+    );
 }
+
 
 export default Top;
