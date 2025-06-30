@@ -8,6 +8,7 @@
 .Mainpage-content {
     margin-left: 50%;
     border: 2px solid black;
+    background: linear-gradient(to bottom, #F8EDE3, #BDD2B6);
     width: 50em;
     height: 40em;
 }

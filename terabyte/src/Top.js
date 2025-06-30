@@ -16,7 +16,7 @@ function Top() {
     return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const blur = Math.min(scrollPercent / 10, 1) * 8;
+    const blur = Math.min(scrollPercent / 10, 1) * 3;
     const bgOpacity = Math.min(scrollPercent / 10, 1);
 
     const styleVars = {
