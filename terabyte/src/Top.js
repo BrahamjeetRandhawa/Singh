@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 function Top() {
         const [scrollPercent, setScrollPercent] = useState(0);
+        const [compact, setCompact] = useState(false);
     
         useEffect(() => {
             const handleScroll = () => {
@@ -11,6 +12,7 @@ function Top() {
                 const docHeight = document.documentElement.scrollHeight - window.innerHeight;
                 const scrolled = (scrollTop / docHeight) * 100;
                 setScrollPercent(scrolled);
+                setCompact(scrollTop > 20);
             };
         window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -22,11 +24,13 @@ function Top() {
     const styleVars = {
         '--topbar-blur' : `${blur}px`,
         '--topbar-bg': `linear-gradient(to top, rgba(255,255,255, ${0.1 * bgOpacity}), rgba(0,0,0 ${0.2 * bgOpacity}) 100%)`
-    }
+    };
+
+    const topbarClass = `topbar ${compact ? 'compact' : ''}`;
         
 
     return (
-        <div className= "topbar" style={styleVars}>
+        <div className={topbarClass} style={styleVars}>
             <h1>TeraByte</h1>
             <nav className= "terabytebar">
                 <ul className= "terabytebarlist">
