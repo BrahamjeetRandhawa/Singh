@@ -1,10 +1,11 @@
 import './Topstyle.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 
 function Top() {
         const [scrollPercent, setScrollPercent] = useState(0);
         const [compact, setCompact] = useState(false);
+        const prevScroll = useRef(0);
     
         useEffect(() => {
             const handleScroll = () => {
@@ -12,18 +13,30 @@ function Top() {
                 const docHeight = document.documentElement.scrollHeight - window.innerHeight;
                 const scrolled = (scrollTop / docHeight) * 100;
                 setScrollPercent(scrolled);
-                setCompact(scrollTop > 20);
+                
+                if (scrollTop === 0) {
+                    setCompact(false);
+                } else if (scrollTop > prevScroll.current) {
+                    setCompact(true);
+                } else if (scrollTop < prevScroll.current) {
+                    setCompact(false);
+                }
+                prevScroll.current = scrollTop
             };
         window.addEventListener("scroll", handleScroll);
+
+        handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const blur = Math.min(scrollPercent / 10, 1) * 3;
-    const bgOpacity = Math.min(scrollPercent / 10, 1);
+    const blur = compact ? 0 : 4;
+    const bgOpacity = compact ? 0 : 1;
+
 
     const styleVars = {
         '--topbar-blur' : `${blur}px`,
-        '--topbar-bg': `linear-gradient(to top, rgba(255,255,255, ${0.1 * bgOpacity}), rgba(0,0,0 ${0.2 * bgOpacity}) 100%)`
+        '--topbar-bg': `linear-gradient(to top, rgba(255,255,255, ${0.1 * bgOpacity}), rgba(0,0,0, ${0.2 * bgOpacity}) 100%)`
     };
 
     const topbarClass = `topbar ${compact ? 'compact' : ''}`;

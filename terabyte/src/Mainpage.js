@@ -8,6 +8,7 @@ function Mainpage() {
             <div className="Mainpage-content">
 
             </div>
+            <div className="Mainpage-content"></div>
         </div>
     );
 }
