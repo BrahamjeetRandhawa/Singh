@@ -18,7 +18,7 @@
     "test": "start",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "set NODE_OPTIONS=--openssl-legacy-provider && npm start --prefix dashboard",
+    "client": "set NODE_OPTIONS=--openssl-legacy-provider && npm start --prefix terabyte",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
