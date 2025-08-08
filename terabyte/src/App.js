@@ -1,6 +1,8 @@
 
 import Top from './Top';
 import Mainpage from './Mainpage';
+import Footer from './Footer';
+
 import './App.css';
 
 function App() {
@@ -14,6 +16,9 @@ function App() {
       
       <Mainpage className= "Mainpageterabyte" />
         </div>
+        <footer className="App-footer">
+          <Footer className="Footerpage" />
+        </footer>
       </main>
         
     </div>

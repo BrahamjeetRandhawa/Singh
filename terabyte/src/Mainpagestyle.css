@@ -1,14 +1,45 @@
-
-.Mainpage > h2 {
-    text-align: center;
-    font-size: 34px;
-    font-weight: 900;
+.IMGcontainer {
+    border: 2px solid red;
+    margin-top: 18em;
+    height: 40em;
+    width: 100%;
+    border-radius: 2rem;
+    justify-items: center;
+    align-items: center;
 }
 
-.Mainpage-content {
-    margin-left: 50%;
-    border: 2px solid black;
-    background: linear-gradient(to bottom, #F8EDE3, #BDD2B6);
-    width: 50em;
-    height: 40em;
+.Mainpage-button {
+    border: 2px solid green;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40em;
+    margin-left: 120em;
+    width: 12em;
+    border-radius: 18px;
+}
+.Buy-button-text {
+    border: 2px solid blue;
+    justify-items: right;
+    align-items: center;
+    bottom: 20px;
+    right: 20px;
+}
+
+.Carousel-button {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 3em;
+    
+}
+
+.Carousel-buttons {
+    padding: 1em;
+    border-radius: 50%;
+
+
 }

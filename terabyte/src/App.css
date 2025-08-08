@@ -16,17 +16,19 @@
 }
 
 .App {
-  height: 500vh;
+  height: 100vh;
 }
 
 .Main-content {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 26em 1fr;
   grid-template-rows: auto 1fr;
   overflow-x: hidden;
   overflow-y: hidden;
   margin-top: 20vh;
-  height: 100vh;
+  height: 100vh; */
+
+  padding: 1rem 2rem;
 }
 
 .Topbar {
@@ -42,4 +44,10 @@
 .App-main > .Mainpageterabyte {
   padding-top: 1em;
   overflow-y: auto;
+}
+
+.App-footer {
+  margin-top: 8em;
+  height: 50em;
+  padding: 1rem 2rem;
 }
